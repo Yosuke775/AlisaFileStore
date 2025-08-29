@@ -55,7 +55,7 @@ async def start_command(client: Client, message: Message):
         return await not_joined(client, message)
 
     # File auto-delete time in seconds (Set your desired time in seconds here)
-    FILE_AUTO_DELETE = await db.get_del_timer()  # Example: 3600 seconds (1 hour)
+    FILE_AUTO_DELETE = await db.get_del_timer(3600)  # Example: 3600 seconds (1 hour)
 
     # Handle normal message flow
     text = message.text
