@@ -138,6 +138,8 @@ async def start_command(client: Client, message: Message):
     ]
             ]
         )
+            await message.reply_chat_action(ChatAction.TYPING)
+
         await message.reply_photo(
             photo=START_PIC,
             caption=START_MSG.format(
